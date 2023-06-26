@@ -55,12 +55,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/score"
+            android:layout_above="@id/user"
             android:layout_marginBottom="8dp"
             android:text="Hint: if it's a radio, there's one answer."
             android:textAlignment="center"
             android:textSize="12sp"
             android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/score"
+            android:layout_centerHorizontal="true"
+            android:text="User"
+            android:textAlignment="center"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/score"

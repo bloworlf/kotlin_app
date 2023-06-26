@@ -64,7 +64,9 @@ class Login : BaseActivity() {
             }
 
             //go to next activity
-            startActivity(Intent(this@Login, Quiz::class.java))
+            var intent = Intent(this@Login, Quiz::class.java)
+            intent.putExtra("username", username)
+            startActivity(intent)
             this@Login.finish()
         }
     }

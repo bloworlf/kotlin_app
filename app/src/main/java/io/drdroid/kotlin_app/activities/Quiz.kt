@@ -32,6 +32,8 @@ class Quiz : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        var username: String? = intent.getStringExtra("username")
+
         window.statusBarColor = resources.getColor(R.color.light_blue, null)
 //        window.navigationBarColor = resources.getDrawable(R.drawable.activity_bg, null)
 
@@ -103,6 +105,10 @@ class Quiz : BaseActivity() {
 
         val questionLayout: LinearLayout = binding.questionLayout
         val txtScore: TextView = binding.score
+        val user: TextView = binding.user
+        username?.let {
+            user.text = username
+        }
 
         displayQuestion(questionIndex, questionLayout)
 
